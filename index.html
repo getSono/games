@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+</head>
+<body>
+    <script>
+        // Funktion zur Überprüfung des Gerätetyps und Weiterleitung zu entsprechender Seite
+        function redirectBasedOnDevice() {
+            // Überprüfen, ob es sich um ein Mobilgerät handelt
+            if (/Mobi/.test(navigator.userAgent)) {
+                // Weiterleitung zu mobiler Seite
+                window.location.href = "mobile.html";
+            } else {
+                // Weiterleitung zu Desktop-Seite
+                window.location.href = "desktop.html";
+            }
+        }
+
+        // Seite wird geladen, Funktion zur Weiterleitung wird aufgerufen
+        window.onload = redirectBasedOnDevice;
+    </script>
+</body>
+</html>
